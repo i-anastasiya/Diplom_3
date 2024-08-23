@@ -19,7 +19,7 @@ class ListOrderLocators:
     ALL_ORDER_TODAY = (By.XPATH,"//p[contains(@class, 'text_type_main') and contains(text(), 'Выполнено за сегодня')]/following-sibling::p[contains(@class, 'text_type_digits-large')]")
 
     # номер заказа
-    ORDER_NUMBER = (By.XPATH, "/html/body/div/div/main/div/div/ul/li[3]/a/div[1]/p[1]")
+    ORDER_NUMBER = (By.XPATH, '//div[@class="OrderHistory_textBox__3lgbs mb-6"]')
 
     # номер заказа в разделе готовятся
     MY_ORDER_NUMBER = (By.XPATH, "//div[@class='some-class']/ul[2]/li")

@@ -1,6 +1,6 @@
 import pytest
 from selenium import webdriver
-from constants import Constants
+from constants import InfoUrls
 
 @pytest.fixture(scope="function", params=["Chrome", "Firefox"])
 def driver(request):
@@ -9,18 +9,18 @@ def driver(request):
         browser = webdriver.Chrome()
     elif request.param == "Firefox":
         browser = webdriver.Firefox()
-    browser.get(Constants.URL)
+    browser.get(InfoUrls.URL)
     yield browser
     browser.quit()
 
 @pytest.fixture
 def list_order(driver):
     # фикстура для открытия экрана со списками заказов
-    driver.get(Constants.URL_LIST_ORDER)
+    driver.get(InfoUrls.URL_LIST_ORDER)
     return driver
 
 @pytest.fixture
 def login(driver):
     # фикстура для открытия экрана авторизации
-    driver.get(Constants.URL_LOGIN)
+    driver.get(InfoUrls.URL_LOGIN)
     return driver
