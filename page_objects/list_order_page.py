@@ -1,9 +1,9 @@
 import allure
-
+from page_objects.base_page import BasePage
 from locators.list_order_locators import ListOrderLocators
 
 
-class ListOrderPage:
+class ListOrderPage(BasePage):
     def __init__(self, driver):
         self.driver = driver
 

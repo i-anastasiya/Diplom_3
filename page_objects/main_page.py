@@ -1,9 +1,10 @@
 import allure
+from page_objects.base_page import BasePage
 from locators.main_locators import MainLocators
 from selenium.webdriver import ActionChains
 
 
-class MainPage:
+class MainPage(BasePage):
     def __init__(self, driver):
         self.driver = driver
 

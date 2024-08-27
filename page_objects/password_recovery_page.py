@@ -1,9 +1,10 @@
 import allure
+from page_objects.base_page import BasePage
 from locators.login_locators import LoginLocators
 from constants import Constants
 
 
-class PasswordRecoveryPage:
+class PasswordRecoveryPage(BasePage):
     def __init__(self, driver):
         self.driver = driver
 
